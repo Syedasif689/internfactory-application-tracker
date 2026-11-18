@@ -97,7 +97,7 @@ Install the following software:
 ### Step 1: Clone the Repository
 
 ```bash
-git clone YOUR_PUBLIC_GITHUB_REPOSITORY_URL
+git clone https://github.com/Syedasif689/internfactory-application-tracker
 cd application-tracker
 ```
 
