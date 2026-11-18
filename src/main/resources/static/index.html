@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Tracker | Admin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="app-layout">
+
+    <aside class="sidebar">
+        <div class="brand">
+            <div class="brand-icon">A</div>
+            <div>
+                <h2>ApplyTrack</h2>
+                <span>ADMIN PORTAL</span>
+            </div>
+        </div>
+
+        <nav>
+            <a href="#" class="nav-link active">
+                <span>▦</span> Dashboard
+            </a>
+            <a href="#applications" class="nav-link">
+                <span>☷</span> Applications
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <div class="admin-avatar">AD</div>
+            <div>
+                <strong>Administrator</strong>
+                <small>Admin Account</small>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div>
+                <p class="breadcrumb">ADMIN / DASHBOARD</p>
+                <h1>Application Dashboard</h1>
+                <p class="subtitle">Manage and review candidate applications.</p>
+            </div>
+
+            <div class="topbar-right">
+                <span class="live-indicator"></span>
+                <span>System Online</span>
+            </div>
+        </header>
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <div class="stat-heading">
+                    <span>Total Applications</span>
+                    <span class="stat-icon">▤</span>
+                </div>
+                <h2 id="totalCount">0</h2>
+                <p>All submitted applications</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-heading">
+                    <span>New Applications</span>
+                    <span class="stat-icon">◷</span>
+                </div>
+                <h2 id="newCount">0</h2>
+                <p>Awaiting review</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-heading">
+                    <span>Shortlisted</span>
+                    <span class="stat-icon">✓</span>
+                </div>
+                <h2 id="shortlistedCount">0</h2>
+                <p>Selected candidates</p>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-heading">
+                    <span>Rejected</span>
+                    <span class="stat-icon">×</span>
+                </div>
+                <h2 id="rejectedCount">0</h2>
+                <p>Not selected</p>
+            </div>
+
+        </section>
+
+        <section class="applications-section" id="applications">
+
+            <div class="section-heading">
+                <div>
+                    <h2>Applications</h2>
+                    <p>Review and manage submitted candidates.</p>
+                </div>
+                <span class="record-count" id="recordCount">0 Records</span>
+            </div>
+
+            <div class="filters">
+
+                <div class="search-box">
+                    <span>⌕</span>
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="Search by name or college..."
+                    >
+                </div>
+
+                <select id="domainFilter">
+                    <option value="">All Domains</option>
+                    <option value="Software Development and Full-Stack Engineering">
+                        Software Development
+                    </option>
+                    <option value="Data Engineering, Cloud and Analytics">
+                        Data Engineering & Cloud
+                    </option>
+                    <option value="Artificial Intelligence and Automation">
+                        AI & Automation
+                    </option>
+                    <option value="Software Testing and Quality Assurance">
+                        Software Testing & QA
+                    </option>
+                </select>
+
+            </div>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>APPLICANT</th>
+                            <th>COLLEGE</th>
+                            <th>YEAR</th>
+                            <th>DOMAIN</th>
+                            <th>STATUS</th>
+                            <th>ACTION</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="applicationTable">
+                        <tr>
+                            <td colspan="6" class="loading">
+                                Loading applications...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="message" class="message"></div>
+
+        </section>
+
+        <footer>
+            <span>© 2026 ApplyTrack</span>
+            <span>Application Management System</span>
+        </footer>
+
+    </main>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

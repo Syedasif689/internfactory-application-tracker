@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Applicant Details | ApplyTrack</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+
+<div class="details-layout">
+
+    <header class="details-header">
+        <a href="/" class="back-link">← Back to Dashboard</a>
+        <div class="details-brand">ApplyTrack <span>ADMIN</span></div>
+    </header>
+
+    <main class="details-main">
+
+        <div class="profile-heading">
+            <div>
+                <p class="breadcrumb">APPLICATIONS / APPLICANT PROFILE</p>
+                <h1>Applicant Details</h1>
+                <p class="subtitle">Review candidate information and update application status.</p>
+            </div>
+
+            <span id="profileStatus" class="status status-NEW">NEW</span>
+        </div>
+
+        <section class="profile-card">
+
+            <div class="profile-top">
+                <div class="profile-avatar" id="profileAvatar">A</div>
+
+                <div>
+                    <h2 id="fullName">Loading applicant...</h2>
+                    <p id="email">Please wait</p>
+                    <small id="applicationId"></small>
+                </div>
+            </div>
+
+            <div class="details-divider"></div>
+
+            <h3>Personal Information</h3>
+
+            <div class="details-grid">
+                <div class="detail-item">
+                    <label>Full Name</label>
+                    <p id="nameValue">-</p>
+                </div>
+
+                <div class="detail-item">
+                    <label>Email Address</label>
+                    <p id="emailValue">-</p>
+                </div>
+
+                <div class="detail-item">
+                    <label>Mobile Number</label>
+                    <p id="mobileValue">-</p>
+                </div>
+
+                <div class="detail-item">
+                    <label>Application Date</label>
+                    <p id="dateValue">-</p>
+                </div>
+            </div>
+
+            <div class="details-divider"></div>
+
+            <h3>Academic Information</h3>
+
+            <div class="details-grid">
+                <div class="detail-item">
+                    <label>College</label>
+                    <p id="collegeValue">-</p>
+                </div>
+
+                <div class="detail-item">
+                    <label>Degree Program</label>
+                    <p id="degreeValue">-</p>
+                </div>
+
+                <div class="detail-item">
+                    <label>Academic Year</label>
+                    <p id="yearValue">-</p>
+                </div>
+
+                <div class="detail-item">
+                    <label>Preferred Domain</label>
+                    <p id="domainValue">-</p>
+                </div>
+            </div>
+
+            <div class="details-divider"></div>
+
+            <h3>Technical Skills</h3>
+            <p class="long-text" id="skillsValue">-</p>
+
+            <div class="details-divider"></div>
+
+            <h3>Statement of Interest</h3>
+            <p class="long-text" id="interestValue">-</p>
+
+            <div class="details-divider"></div>
+
+            <h3>Resume</h3>
+            <a id="resumeLink" href="#" target="_blank" rel="noopener noreferrer">
+                View Resume ↗
+            </a>
+
+        </section>
+
+        <section class="status-card">
+
+            <div>
+                <h3>Manage Application Status</h3>
+                <p>Update the candidate's application decision.</p>
+            </div>
+
+            <div class="status-controls">
+                <select id="statusSelect">
+                    <option value="NEW">New</option>
+                    <option value="SHORTLISTED">Shortlisted</option>
+                    <option value="REJECTED">Rejected</option>
+                </select>
+
+                <button id="saveStatusBtn" onclick="saveStatus()">
+                    Save Status
+                </button>
+            </div>
+
+            <p id="statusMessage"></p>
+
+        </section>
+
+    </main>
+
+    <footer class="details-footer">
+        © 2026 ApplyTrack — Application Management System
+    </footer>
+
+</div>
+
+<script src="details.js"></script>
+</body>
+</html>
