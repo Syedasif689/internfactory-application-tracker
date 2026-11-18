@@ -244,9 +244,22 @@ It supports searching, domain filtering, viewing individual application details,
 
 The project demonstrates the integration of frontend technologies, Java Spring Boot, REST APIs and relational database management in a practical full-stack application.
 
+
 ---
 
 **Developed for:** InternFactory Private Limited  
 **Domain:** Software Development and Full-Stack Engineering  
 **Project:** ApplyTrack – Application Tracker  
 **Developer:** Syed Asif
+
+---
+## 11. APPLICATION SCREENSHOTS
+
+### Dashboard
+![Application Dashboard](screenshots/dashboard.png)
+
+### Search and Domain Filtering
+![Search and Filter](screenshots/search-filter.png)
+
+### Applicant Details
+![Applicant Details](screenshots/applicant-details.png)
